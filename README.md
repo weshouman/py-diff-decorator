@@ -50,7 +50,7 @@ def test_example_with_custom_tool(self):
 
 ### Notes
 
-- The decorator only runs when the test shows differences.
+- The decorator only runs when the test shows differences (e.g., if it fails).
 
 ## Requirements
 
