@@ -58,12 +58,22 @@ def test_example_with_custom_tool(self):
 - External diff tool (e.g., vimdiff, meld, diff)
 
 ## Development
+
 For development, clone the repository and install the package using pip:
 
 ```bash
 git clone https://github.com/weshouman/diff_decorator.git
 cd diff_decorator
 pip install .
+```
+
+To publish the project
+
+```
+pip install setuptools
+python setup.py sdist bdist_wheel
+pip install twine
+twine upload dist/*
 ```
 
 ## License
