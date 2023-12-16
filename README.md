@@ -1,5 +1,7 @@
 # Diff Decorator
 
+[![Unit Test Diff Decorator](https://github.com/weshouman/py-diff-decorator/actions/workflows/python-test.yml/badge.svg)](https://github.com/weshouman/py-diff-decorator/actions/workflows/python-test.yml)
+
 ## Overview
 `diff_decorator` is a Python package that provides a decorator for unittests, enhancing the visualization of differences when assertions fail. It allows easy comparison of expected and actual results using a diff tool of your choice.
 
