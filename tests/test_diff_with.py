@@ -4,7 +4,7 @@ from diff_decorator import diff_with
 
 class TestDiffWithDecorator(unittest.TestCase):
 
-    @patch('diff_decorator.diff_with.subprocess.run')
+    @patch('subprocess.run')
     def test_failed_default(self, mock_run):
         expected = "Hello\nWorld\n"
         actual = "Hello\nUniverse\n"
@@ -12,7 +12,7 @@ class TestDiffWithDecorator(unittest.TestCase):
             diff_with()(self.assertEqual)(expected, actual)
         mock_run.assert_called_once()
 
-    @patch('diff_decorator.diff_with.subprocess.run')
+    @patch('subprocess.run')
     def test_failed_custom(self, mock_run):
         expected = "Hello\nAll\n"
         actual = "Hello\nEveryone\n"
@@ -20,7 +20,7 @@ class TestDiffWithDecorator(unittest.TestCase):
             diff_with(tool='meld')(self.assertEqual)(expected, actual)
         mock_run.assert_called_once_with(['meld', unittest.mock.ANY, unittest.mock.ANY])
 
-    @patch('diff_decorator.diff_with.subprocess.run')
+    @patch('subprocess.run')
     def test_passed(self, mock_run):
         expected = "Hello\nWorld\n"
         actual = "Hello\nWorld\n"
